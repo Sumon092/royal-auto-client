@@ -2,6 +2,7 @@ import React from 'react';
 import { Container, Navbar } from 'react-bootstrap';
 import Nav from 'react-bootstrap/Nav'
 import logo from '../../../images/logo/logo.svg'
+import Banner from '../../Home/Banner/Banner';
 const Header = () => {
     return (
         <>
@@ -10,7 +11,7 @@ const Header = () => {
                     <Navbar.Brand href="#home"><img style={{ width: '163px' }} src={logo} alt="" /></Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
-                        <Nav className="me-auto">
+                        <Nav className="ms-auto">
                             <Nav.Link href="#home" className='fw-bold'>Home</Nav.Link>
                             <Nav.Link href="#inventory" className='fw-bold'>Inventory</Nav.Link>
                             <Nav.Link href="#features" className='fw-bold'>Features</Nav.Link>
@@ -24,6 +25,7 @@ const Header = () => {
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
+
         </>
     );
 };

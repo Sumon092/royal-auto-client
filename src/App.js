@@ -5,12 +5,14 @@ import Home from './pages/Home/Home/Home';
 import Inventories from './pages/Home/Inventories/Inventories';
 import Header from './pages/Shared/Header/Header';
 import Footer from './pages/Shared/Footer/Footer';
+import Banner from './pages/Home/Banner/Banner';
 
 function App() {
   return (
-    <div className="App">
+    <>
 
       <Header />
+
       <Routes>
         <Route path='/' element={<Home />}></Route>
         <Route path='/home' element={<Home />}></Route>
@@ -18,7 +20,7 @@ function App() {
       </Routes>
       <Footer />
 
-    </div>
+    </>
   );
 }
 
