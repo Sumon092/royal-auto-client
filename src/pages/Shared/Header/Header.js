@@ -6,7 +6,7 @@ import Banner from '../../Home/Banner/Banner';
 const Header = () => {
     return (
         <>
-            <Navbar collapseOnSelect expand="lg" bg="light" variant="primary">
+            <Navbar collapseOnSelect expand="lg" bg="light" variant="primary" sticky="top">
                 <Container>
                     <Navbar.Brand href="#home"><img style={{ width: '163px' }} src={logo} alt="" /></Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />

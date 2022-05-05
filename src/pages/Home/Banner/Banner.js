@@ -6,7 +6,7 @@ import './Banner.css'
 const Banner = () => {
     return (
         <>
-            <div className='container d-flex justify-center align-items-center w-100 mt-5'>
+            <div className='container d-flex justify-center align-items-center w-100 mt-5' >
                 <div className="banner-tet w-50">
                     <h1 className='fw-bold banner-title'>Find Your Next Car at
                         <br /> Auto Royal

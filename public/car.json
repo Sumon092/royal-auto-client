@@ -1,0 +1,56 @@
+[
+    {
+        "id": "1",
+        "name": "2017-Mazda-6",
+        "img": "https://i.ibb.co/MhYpPY8/2017-Mazda6-front-three-quarter-headlights.jpg",
+        "description": "RED, MIDSIZE CARS, 5 SEATS, 4 DOORS, REGULAR UNLEADED, MANUAL, FRONT WHEEL DRIV",
+        "price": "22000",
+        "quantity": "10",
+        "supplier": "Mazda"
+    },
+    {
+        "id": "2",
+        "name": "2016-Audi A6",
+        "img": "https://i.ibb.co/L915Y2F/2016-audi-a4-premium-sedan-angular-front1.png",
+        "description": "BLUE, HATCHBACKS, 2 SEATS, 4 DOORS, PREMIUM UNLEADED (REQUIRED), AUTOMATIC, FRONT WHEEL DRIVE",
+        "price": "3200",
+        "quantity": "15",
+        "supplier": "Audi"
+    },
+    {
+        "id": "3",
+        "name": "Honda CR-V",
+        "img": "https://i.ibb.co/4fmKfHX/2016-Honda-CR-V-rear-three-quarter.jpg",
+        "description": "GRAY, CROSSOVER, 2 SEATS, 5 DOORS, REGULAR UNLEADED, AUTOMATIC, FRONT WHEEL DRIVE",
+        "price": "32900",
+        "quantity": "5",
+        "supplier": "Honda"
+    },
+    {
+        "id": "4",
+        "name": "2017 Volvo S80",
+        "img": "https://i.ibb.co/DGSPFdM/2017-Volvo-S90-front-end-in-motion-03-e1464980474217.jpg",
+        "description": "BLUE, MIDSIZE CARS, 5 SEATS, 4 DOORS, REGULAR UNLEADED, AUTOMATIC, FRONT WHEEL DRIV",
+        "price": "44300",
+        "quantity": "5",
+        "supplier": "Volvo"
+    },
+    {
+        "id": "5",
+        "name": "2017 BMW M4",
+        "img": "https://i.ibb.co/wNNzjxK/2017-BMW-M4-coupe-rear-three-quarter.jpg",
+        "description": "RED, HATCHBACKS, 2 SEATS, 2 DOORS, PREMIUM UNLEADED (REQUIRED), MANUAL, REAR WHEEL DRIVE",
+        "price": "36000",
+        "quantity": "12",
+        "supplier": "BMW"
+    },
+    {
+        "id": "6",
+        "name": "2017 Toyota Yaris",
+        "img": "https://i.ibb.co/NKkNVCJ/2017-toyota-yaris-le-3-door-hatchback-angular-front-1.png",
+        "description": "WHITE, HATCHBACKS, 2 SEATS, 2 DOORS, REGULAR UNLEADED, AUTOMATIC, FRONT WHEEL DRIV",
+        "price": "11000",
+        "quantity": "16",
+        "supplier": "Toyota"
+    }
+]
