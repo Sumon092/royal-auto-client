@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Inventory from '../Inventory/Inventory';
+import './Inventories.css'
 
 const Inventories = () => {
     const [cars, setCars] = useState([]);
@@ -11,7 +12,7 @@ const Inventories = () => {
     }, [])
     return (
         <div className='container'>
-            <h2>The number of car {cars.length}</h2>
+            <h1 className='display-2 fw-bold text-center mt-5 car-items'>Car Items</h1>
             <div className='row'>
                 {
                     cars.map(car => <Inventory key={car._id} car={car}></Inventory>)
