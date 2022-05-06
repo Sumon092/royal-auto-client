@@ -6,6 +6,8 @@ import Inventories from './pages/Home/Inventories/Inventories';
 import Header from './pages/Shared/Header/Header';
 import Footer from './pages/Shared/Footer/Footer';
 import Banner from './pages/Home/Banner/Banner';
+import UpdateInventory from './pages/UpdateInventory/UpdateInventory';
+import InventoryDetail from './pages/InventoryDetail/InventoryDetail';
 
 function App() {
   return (
@@ -16,7 +18,8 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />}></Route>
         <Route path='/home' element={<Home />}></Route>
-        <Route path='/inventories/:id' element={<Inventories />}></Route>
+        <Route path='/inventory/:id' element={<InventoryDetail />}></Route>
+        <Route path='/update/:id' element={<UpdateInventory />}></Route>
       </Routes>
       <Footer />
 
