@@ -6,8 +6,8 @@ import './Inventory.css'
 const Inventory = ({ car }) => {
     const { _id, name, price, img, description, supplier, quantity } = car;
     const navigate = useNavigate();
-    const navigateToInventoryDetail = _id => {
-        navigate(`/inventory/${_id}`)
+    const navigateToInventoryDetail = id => {
+        navigate(`/inventory/${id}`)
     }
     return (
         <div className='col col-md-4 mb-5 mt-5'>

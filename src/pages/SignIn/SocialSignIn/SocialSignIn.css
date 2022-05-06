@@ -1,0 +1,33 @@
+.google-logo {
+    background-color: #4285F4;
+}
+
+.facebook-logo {
+    background-color: #3B5998;
+}
+
+.google-button {
+    border: none;
+    background-color: #4285F4;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+}
+
+.facebook-button {
+    border: none;
+    background-color: #3B5998;
+    color: #FFFFFF;
+
+}
+
+.facebook-button img {
+    margin-right: 20px;
+    border-radius: 50%;
+
+}
+
+.google-button img {
+    background-color: #FFFFFF;
+    margin-right: 20px;
+    border-radius: 50%;
+}
