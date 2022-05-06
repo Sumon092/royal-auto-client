@@ -6,8 +6,8 @@ import './WhyUs.css'
 
 const WhyUs = () => {
     return (
-        <div className='container'>
-            <div className="row">
+        <div className='container mt-5'>
+            <div className="row mt-5">
                 <div className="col col-md-4">
                     <img style={{ width: "300px" }} src={image1} alt="" />
                     <h3 className='mt-3 mb-3'>In House Financing </h3>

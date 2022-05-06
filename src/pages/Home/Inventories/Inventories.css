@@ -1,3 +1,13 @@
 .container .car-items {
     color: #2c425d;
 }
+
+.manage-inventories {
+    background-color: #2c425d;
+    color: #ffffff;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 10px 120px;
+    border-radius: 10px;
+    margin-right: 0;
+}

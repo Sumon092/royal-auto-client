@@ -70,7 +70,7 @@ const SignIn = () => {
                             </p>
                         </Form.Group>
                         {
-                            loading ? <Loading></Loading> : ""
+                            loading ? <Loading style={{ width: '30px' }}></Loading> : ""
                         }
                         <p>Forgot Password ? <button onClick={handleResetPassword} className='text-decoration-none btn btn-link'  >Reset Password</button></p>
                         <button className='w-50 mx-auto d-block mb-2 btn btn btn-outline-primary rounded-pill fs-16' variant="primary" type="submit">

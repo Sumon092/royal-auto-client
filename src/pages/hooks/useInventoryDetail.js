@@ -1,17 +1,17 @@
 import { useEffect, useState } from 'react';
 
 const useInventoryDetail = id => {
-    const [service, setService] = useState({});
+    const [inventory, setInventory] = useState({});
 
     useEffect(() => {
         const url = `http://localhost:5000/inventory/${id}`;
         console.log(url);
         fetch(url)
             .then(res => res.json())
-            .then(data => setService(data));
+            .then(data => setInventory(data));
 
     }, [id])
-    return [service]
+    return [inventory]
 };
 
 export default useInventoryDetail;

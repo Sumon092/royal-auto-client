@@ -2,12 +2,14 @@ import { Form } from 'react-bootstrap';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
+import Loading from '../../Shared/Loading/Loading';
 import SocialSignIn from '../SocialSignIn/SocialSignIn';
 
 const SignUp = () => {
     const [
         createUserWithEmailAndPassword,
         user,
+        loading,
         error,
     ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
     const navigate = useNavigate();
@@ -48,6 +50,9 @@ const SignUp = () => {
                             <Form.Label>Confirm Password</Form.Label>
                             <Form.Control type="password" name="confirmPassword" placeholder="" required />
                         </Form.Group>
+                        {
+                            loading ? <Loading></Loading> : ''
+                        }
                         {error}
                         <button
                             className='w-100 mx-auto d-block mb-3 btn btn btn-outline-primary rounded-pill fs-16 ' variant="primary" type="submit">

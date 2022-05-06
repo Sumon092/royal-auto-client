@@ -12,6 +12,7 @@ import RequiredAuth from './pages/SignIn/RequiredAuth/RequiredAuth';
 import SignIn from './pages/SignIn/SignIn/SignIn';
 import SignUp from './pages/SignIn/SignUp/SignUp';
 import SocialSignIn from './pages/SignIn/SocialSignIn/SocialSignIn';
+import ManageInventory from './pages/ManageInventory/ManageInventory';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
         <Route path='/signIn' element={<SignIn />}></Route>
         <Route path='/signUp' element={<SignUp />}></Route>
         <Route path='/socialLogin' element={<SocialSignIn></SocialSignIn>}></Route>
+        <Route path='/manageInventory' element={<ManageInventory />}></Route>
         <Route path='/update/:id' element={<UpdateInventory />}></Route>
       </Routes>
       <Footer />

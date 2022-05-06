@@ -1,0 +1,32 @@
+.mission {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    grid-gap: 30px;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.mission-button {
+    background-color: azure;
+    margin: auto;
+    display: inline;
+    padding: 5px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.mission-text h2 {
+    margin-top: 10px;
+    font-size: 38px;
+    line-height: 40px;
+    font-weight: bold;
+    color: #2C425D;
+    margin-bottom: 15px;
+}
+
+.mission-text p {
+    font-size: 24px;
+    line-height: 32px;
+    color: #696969;
+}
