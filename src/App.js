@@ -5,7 +5,6 @@ import Home from './pages/Home/Home/Home';
 import Inventories from './pages/Home/Inventories/Inventories';
 import Header from './pages/Shared/Header/Header';
 import Footer from './pages/Shared/Footer/Footer';
-import Banner from './pages/Home/Banner/Banner';
 import UpdateInventory from './pages/UpdateInventory/UpdateInventory';
 import InventoryDetail from './pages/InventoryDetail/InventoryDetail';
 import RequiredAuth from './pages/SignIn/RequiredAuth/RequiredAuth';
@@ -13,6 +12,7 @@ import SignIn from './pages/SignIn/SignIn/SignIn';
 import SignUp from './pages/SignIn/SignUp/SignUp';
 import SocialSignIn from './pages/SignIn/SocialSignIn/SocialSignIn';
 import ManageInventory from './pages/ManageInventory/ManageInventory';
+import InsertQuantity from './pages/InsertQuantity/InsertQuantity';
 
 function App() {
   return (
@@ -31,6 +31,7 @@ function App() {
         <Route path='/signUp' element={<SignUp />}></Route>
         <Route path='/socialLogin' element={<SocialSignIn></SocialSignIn>}></Route>
         <Route path='/manageInventory' element={<ManageInventory />}></Route>
+        <Route path='/insertQuantity/:id' element={<InsertQuantity />}></Route>
         <Route path='/update/:id' element={<UpdateInventory />}></Route>
       </Routes>
       <Footer />

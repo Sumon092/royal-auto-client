@@ -1,20 +1,31 @@
 import React, { useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import useInventoryDetail from '../hooks/useInventoryDetail';
+
+
 
 const InventoryDetail = () => {
     const { id } = useParams();
-    const [inventory] = useInventoryDetail(id)
+    const [inventory] = useInventoryDetail(id);
     const { _id, img, name, price, supplier, quantity, description } = inventory;
-    const [count, setCount] = useState(0)
 
-    const handleQuantity = () => {
-        const count = parseInt(quantity);
-        console.log(count);
-        setCount(count - 1)
+
+    const handleDeliveredQuantity = () => {
+        if (inventory.quantity < 1) {
+            alert('item quantity is not enough')
+            return
+        }
+        fetch(`http://localhost:5000/inventory/${id}`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(inventory)
+        })
+            .then(res => res.json())
+            .then(data => { console.log(data) })
+            .catch(error => console.error)
     }
-
-
 
     return (
         <>
@@ -32,7 +43,10 @@ const InventoryDetail = () => {
                                 <p className="card-text">Price : ${price}</p>
                                 <p className="card-text">Supplier: {supplier}</p>
                                 <p className="card-text">Available Quantity : {quantity}</p>
-                                <button onClick={handleQuantity} className='update-button'>DELEVERD</button>
+                                <button onClick={() => handleDeliveredQuantity(inventory._id)} className='update-button'>DELEVERD</button>
+                                <Link to={`/insertQuantity/${_id}`}>
+
+                                    <button className='update-button'>Manage Quantiy</button></Link>
                             </div>
                         </div>
                     </div>
