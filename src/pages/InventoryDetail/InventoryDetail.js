@@ -15,7 +15,7 @@ const InventoryDetail = () => {
             alert('item quantity is not enough')
             return
         }
-        fetch(`http://localhost:5000/inventory/${id}`, {
+        fetch(`http://localhost:5000/delivered/${id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"

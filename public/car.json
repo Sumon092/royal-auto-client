@@ -45,12 +45,35 @@
         "supplier": "BMW"
     },
     {
-        "id": "6",
-        "name": "2017 Toyota Yaris",
-        "img": "https://i.ibb.co/NKkNVCJ/2017-toyota-yaris-le-3-door-hatchback-angular-front-1.png",
-        "description": "WHITE, HATCHBACKS, 2 SEATS, 2 DOORS, REGULAR UNLEADED, AUTOMATIC, FRONT WHEEL DRIV",
-        "price": "11000",
+        "name": "2019 Lamborgini Avenda",
+        "img": "https://i.ibb.co/6rcZ3C3/2016-Lamborghini-Aventador-LP-750-4-Superveloce-front-three-quarter-static-02.jpg",
+        "description": "YELLOW, TWO SEATERS, 2 SEATS, 2 DOORS, PREMIUM UNLEADED (REQUIRED), AUTOMATED MANUAL, ALL WHEEL DRIVE",
+        "price": "120000",
+        "quantity": "10",
+        "supplier": "Lamborgini"
+    },
+    {
+        "name": "2017 Infinity Santa",
+        "img": "https://i.ibb.co/YcZdF2S/45010-2017-Santa-Fe.jpg",
+        "description": "BLUE, MIDSIZE CARS, 5 SEATS, 4 DOORS, PREMIUM UNLEADED (RECOMMENDED), AUTOMATIC, REAR WHEEL DRIVE",
+        "price": "13000",
         "quantity": "16",
-        "supplier": "Toyota"
+        "supplier": "Infinity"
+    },
+    {
+        "name": "2019 Hyundai Star",
+        "img": "https://i.ibb.co/z7vdQKt/2015-Infiniti-Q50-Hybrid-front-three-quarter.jpg",
+        "description": "SILVER, CROSSOVER, 2 SEATS, 2 DOORS, REGULAR UNLEADED, AUTOMATIC, FRONT WHEEL DRIV",
+        "price": "17000",
+        "quantity": "16",
+        "supplier": "Hyundai"
+    },
+    {
+        "name": "2017 Mini-Coper",
+        "img": "https://i.ibb.co/p0KGKtc/2016-mini-cooper-base-convertible-angular-front.png",
+        "description": "WHITE, HATCHBACKS, 2 SEATS, 2 DOORS, REGULAR UNLEADED, AUTOMATIC, FRONT WHEEL DRIV",
+        "price": "14000",
+        "quantity": "16",
+        "supplier": "Coper"
     }
 ]

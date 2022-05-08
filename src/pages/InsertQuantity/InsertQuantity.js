@@ -1,36 +1,50 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import useInventoryDetail from '../hooks/useInventoryDetail';
 
 const InsertQuantity = () => {
     const { id } = useParams()
-    const [inventory] = useInventoryDetail(id);
+    const [quantity, setQuantity] = useState({})
 
-
-    const handleInsertQuantity = (id) => {
-        fetch(`http://localhost:5000/inventory/${id}`, {
-            method: "PUT",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(inventory)
-        })
+    useEffect(() => {
+        fetch(`http://localhost:5000/inventory/${id}`)
             .then(res => res.json())
-            .then(data => { console.log(data) })
-            .catch(error => console.error)
-    }
+            .then(data => setQuantity(data))
+    }, [])
 
     const handleOnSubmit = (event) => {
         event.preventDefault()
         const quantity = event.target.InsertQuantity.value;
-        inventory.quantity(quantity);
+
+        console.log(quantity)
+        let result = quantity;
+        if (!quantity || quantity < 0) {
+            alert('please insert quantity')
+        }
+
+        fetch(`http://localhost:5000/restock/${id}`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(result)
+        })
+            .then(res => res.json())
+            .then(data => console.log(data))
+            .catch(error => console.log(error))
+        console.log('product update', result);
+        event.target.reset();
+
     }
 
     return (
         <div>
-            <form onClick={handleOnSubmit}></form>
-            <input type="number" name="insertQuantity" id="insertQuantity" placeholder='manage quantity' /><br />
-            <button onClick={() => handleInsertQuantity(inventory._id)} className='update-button'>Manage Quantiy</button>
+            <form onSubmit={handleOnSubmit}>
+                <input type="number" name="InsertQuantity" defaultValue={quantity?.quantity} id="insertQuantity" placeholder='manage quantity' /><br />
+                <input type="submit" value="Manage Item" />
+            </form>
+
+
         </div>
     );
 };

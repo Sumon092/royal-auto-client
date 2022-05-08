@@ -1,0 +1,32 @@
+.car-info {
+    border: 2px solid #95A0A7;
+    border-radius: 8px;
+    padding: 8px;
+    margin-top: 21px;
+    max-width: 771px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.car-info p {
+    margin: 0;
+    margin-left: 30px;
+}
+
+.car-info img {
+    width: 150px;
+    height: 150px;
+}
+
+.car-info .remove-item {
+    display: flex;
+    align-items: center;
+}
+
+.remove-item .delete-button {
+    background-color: rgba(235, 87, 87, 0.3);
+    border: 0;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+}
