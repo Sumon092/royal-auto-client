@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import AllProducts from '../../AllProducts/AllProducts';
 import useInventory from '../hooks/useInventory';
 import useInventoryDetail from '../hooks/useInventoryDetail';
@@ -20,6 +20,7 @@ const ManageInventory = () => {
                         cars.map(car => <AllProducts key={car._id} car={car}></AllProducts>)
                     }
                 </div>
+                <Link to="/addItem"> <button className='btn btn-success'>Add New Item</button></Link>
             </div>
         </>
     )
