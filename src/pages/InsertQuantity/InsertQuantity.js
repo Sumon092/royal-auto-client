@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import Inventory from '../Home/Inventory/Inventory';
 import useInventoryDetail from '../hooks/useInventoryDetail';
 
 const InsertQuantity = () => {
@@ -27,7 +28,7 @@ const InsertQuantity = () => {
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(result)
+            body: JSON.stringify({ quantity: quantity })
         })
             .then(res => res.json())
             .then(data => console.log(data))
