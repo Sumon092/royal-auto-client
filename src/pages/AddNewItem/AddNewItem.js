@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useForm } from 'react-hook-form';
 import auth from '../../firebase.init';
 
 const AddNewItem = () => {
@@ -11,56 +12,37 @@ const AddNewItem = () => {
     ] = useSignInWithEmailAndPassword(auth);
 
 
-    const handleAddCar = event => {
-        event.preventDefault();
-        const name = event.target.name.value;
-        const quantity = event.target.quantity.value;
-        const supplier = event.target.supplier.value;
-        const price = event.target.price.value;
-        const image = event.target.image.value;
+    const { register, handleSubmit } = useForm();
 
-
-
-        const car = { name, quantity, supplier, price, image };
-
-
-        //send data to server
-        fetch('https://evening-reaches-93617.herokuapp.com/addCar', {
+    const onSubmit = data => {
+        console.log(data);
+        const url = `https://evening-reaches-93617.herokuapp.com/addCar`;
+        fetch(url, {
             method: 'POST',
             headers: {
-                'Content-type': 'application/json',
+                'content-type': 'application/json'
             },
-            body: JSON.stringify(car)
+            body: JSON.stringify(data)
         })
             .then(res => res.json())
-            .then(data => {
-                console.log('success', data);
-                alert('user added successful');
-                event.target.reset();
+            .then(result => {
+                console.log(result);
             })
-    }
+    };
 
 
     return (
-        <div className='container mx-auto w-100 mt-5'>
-            <div className="bg-light">
-                <form onSubmit={handleAddCar}>
-                    <input type="text" name="name" className='form-control w-25 mx-auto' placeholder='product name' id="" />
-                    <br />
-                    <input type="text" name="price" className='form-control w-25 mx-auto' placeholder='product price' id="" />
-                    <br />
-                    <input type="text" name="quantity" className='form-control w-25 mx-auto' placeholder='quantity' id="" />
-                    <br />
-                    <input type="text" name="image" className='form-control w-25 mx-auto' placeholder='image link' id="" />
-                    <br />
-                    <input type="text" name="supplier" className='form-control w-25 mx-auto' placeholder='supplier name' id="" />
-                    <br />
-                    <input type="text" name="description" className='form-control w-25 mx-auto' placeholder='item description' id="" />
-                    <br />
-                    <input type="submit" className='mx-auto w-25 btn btn-success' value="Add Items" />
-
-                </form>
-            </div>
+        <div className='w-50 mx-auto'>
+            <h2>Add Car Here</h2>
+            <form className='d-flex flex-column' onSubmit={handleSubmit(onSubmit)}>
+                <input className='mb-2' placeholder='Name' {...register("name", { required: true, maxLength: 20 })} />
+                <textarea className='mb-2' placeholder='Description' {...register("description")} />
+                <input className='mb-2' placeholder='Price' type="number" {...register("price")} />
+                <input className='mb-2' placeholder='Photo URL' type="text" {...register("img")} />
+                <input className='mb-2' placeholder='quantity' type="text" {...register("quantity")} />
+                <input className='mb-2' placeholder='Supplier' type="text" {...register("supplier")} />
+                <input type="submit" value="Add Car" />
+            </form>
         </div>
     );
 };
