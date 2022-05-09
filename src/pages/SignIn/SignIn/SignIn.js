@@ -7,6 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import auth from '../../../firebase.init';
 import Loading from '../../Shared/Loading/Loading';
 import SocialSignIn from '../SocialSignIn/SocialSignIn';
+import './SignIn.css'
 
 const SignIn = () => {
     const [
@@ -52,7 +53,7 @@ const SignIn = () => {
         <div className='w-50 mx-auto container' style={{ height: "85vh" }}>
             <h2 className='display-1 fw-bolder text-center'>Sign In</h2>
             <p onClick={handleNavigateToSignUp} className='fs-4 text-center'>Don't have account ? <button className='btn btn-link text-decoration-none fs-4'>Sign up</button></p>
-            <div className='d-flex justify-content-center align-items-center'>
+            <div className='d-flex responsive-signIn justify-content-center align-items-center'>
                 <div className='w-50 me-5'>
                     <Form onSubmit={handleSubmitSignIn}>
                         <Form.Group className="mb-2" controlId="formBasicEmail">
@@ -80,7 +81,7 @@ const SignIn = () => {
 
                     <ToastContainer />
                 </div>
-                <div style={{ width: '0.5px', height: '300px' }} className="bg-secondary me-5 "></div>
+                <div style={{ width: '0.5px', height: '300px' }} className="bg-secondary me-5 signLine"></div>
 
                 <div className='w-50'>
                     <SocialSignIn></SocialSignIn>

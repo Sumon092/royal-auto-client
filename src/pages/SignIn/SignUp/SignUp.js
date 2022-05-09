@@ -4,6 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import Loading from '../../Shared/Loading/Loading';
 import SocialSignIn from '../SocialSignIn/SocialSignIn';
+import './SignUp.css'
 
 const SignUp = () => {
     const [
@@ -34,7 +35,7 @@ const SignUp = () => {
         <div className='container w-50 mx-auto h-100' style={{ height: "90vh" }}>
             <h2 className='display-1 fw-bolder text-center'>Sign Up</h2>
             <p className='fs-4 text-center'>Already have an account ? <Link to='/signIn' className='text-decoration-none' onClick={navigateToSignIn} >Sing In</Link></p>
-            <div className='d-flex justify-content-center align-items-center'>
+            <div className='d-flex responsive-signUp justify-content-center align-items-center'>
                 <div className='me-5 w-50'>
                     <Form onSubmit={handleSignUp}>
                         <Form.Group className="mb-1" controlId="formBasicEmail">
@@ -60,7 +61,7 @@ const SignUp = () => {
                         </button>
                     </Form>
                 </div>
-                <div style={{ width: '0.5px', height: '300px' }} className="bg-secondary me-5 "></div>
+                <div style={{ width: '0.5px', height: '300px' }} className="bg-secondary me-5 signUpLine"></div>
 
                 <div className='w-50'>
                     <SocialSignIn></SocialSignIn>

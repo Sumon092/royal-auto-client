@@ -1,0 +1,11 @@
+@media only screen and (max-width:648px) {
+    .responsive-signUp {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .responsive-signUp .signUpLine {
+        display: none;
+    }
+
+}

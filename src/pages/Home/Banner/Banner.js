@@ -7,18 +7,20 @@ const Banner = () => {
     return (
         <>
             <div className='container d-flex justify-center align-items-center w-100 mt-5' >
-                <div className="banner-tet w-50">
-                    <h1 className='fw-bold banner-title'>Find Your Next Car at
-                        <br /> Auto Royal
-                    </h1>
-                    <p className='banner-text'>
-                        Allow us to guide you through the innovative stress
-                        <br />
-                        free approach in finding your dream car.
-                    </p>
-                </div>
-                <div className="banner-image w-50">
-                    <img style={{ width: '610px' }} className='img-fluid' src={bannerImage} alt="" />
+                <div className="row banner-responsive d-flex justify-center align-items-center w-100 mt-5">
+                    <div className="banner-tet w-50 col col-sm col-lg-6">
+                        <h1 className='fw-bold banner-title'>Find Your Next Car at
+                            <br /> Auto Royal
+                        </h1>
+                        <p className='banner-text'>
+                            Allow us to guide you through the innovative stress
+                            <br />
+                            free approach in finding your dream car.
+                        </p>
+                    </div>
+                    <div className="banner-image w-50 col col-sm">
+                        <img style={{ width: '610px' }} className='img-fluid' src={bannerImage} alt="" />
+                    </div>
                 </div>
             </div>
             <div className='container'>
