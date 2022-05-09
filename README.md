@@ -1,6 +1,27 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The Name of Project [Auto Royal](https://royal-auto-95723.web.app/).
+
+<h2>Features of website</h2>
+<ul>
+    <li>Car Inventory</li>
+    <li>Protected Admin Panel</li>
+    <li>Add,Remove,Delete product opportunity</li>
+    <li>Two way login system</li>
+    <li>Product can be Update</li>
+    <li>Wonderful design</li>
+</ul>
+
+<h2>Technologies used</h2>
+<ul>
+    <li>React</li>
+    <li>Firebase</li>
+    <li>Heroku</li>
+    <li>Html5</li>
+    <li>CSS3</li>
+    <li>React Bootstrap</li>
+    <li>React firebase hooks</li>
+</ul>
 
 ## Available Scripts
 
