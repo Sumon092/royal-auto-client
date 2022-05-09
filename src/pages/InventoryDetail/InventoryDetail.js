@@ -15,7 +15,7 @@ const InventoryDetail = () => {
             alert('item quantity is not enough')
             return
         }
-        fetch(`http://localhost:5000/delivered/${id}`, {
+        fetch(`https://evening-reaches-93617.herokuapp.com/delivered/${id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"

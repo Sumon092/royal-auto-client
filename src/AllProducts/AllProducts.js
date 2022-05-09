@@ -11,7 +11,7 @@ const AllProducts = ({ car }) => {
 
         const proceed = window.confirm('Are you sure?');
         if (proceed) {
-            const url = `http://localhost:5000/product/${id}`;
+            const url = `https://evening-reaches-93617.herokuapp.com/product/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

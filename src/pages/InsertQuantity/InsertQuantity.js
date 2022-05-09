@@ -8,7 +8,7 @@ const InsertQuantity = () => {
     const [quantity, setQuantity] = useState({})
 
     useEffect(() => {
-        fetch(`http://localhost:5000/inventory/${id}`)
+        fetch(`https://evening-reaches-93617.herokuapp.com/inventory/${id}`)
             .then(res => res.json())
             .then(data => setQuantity(data))
     }, [])
@@ -23,7 +23,7 @@ const InsertQuantity = () => {
             alert('please insert quantity')
         }
 
-        fetch(`http://localhost:5000/restock/${id}`, {
+        fetch(`https://evening-reaches-93617.herokuapp.com/restock/${id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"

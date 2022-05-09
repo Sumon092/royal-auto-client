@@ -25,7 +25,7 @@ const AddNewItem = () => {
 
 
         //send data to server
-        fetch('http://localhost:5000/addCar', {
+        fetch('https://evening-reaches-93617.herokuapp.com/addCar', {
             method: 'POST',
             headers: {
                 'Content-type': 'application/json',
